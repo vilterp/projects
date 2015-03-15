@@ -81,6 +81,8 @@ This connects back to the Elm Reactor navigation progress a bit, but it can be d
 
 Some modules are best examined with the time-traveling debugger, others are best examined by poking around with certain functions. It would be extremely cool if we had an in-browser REPL so that we could do either. This would let us show `Element` and `Html` values really easily!
 
+Values of sum and record types should be printed out in the REPL such that you can click on their attributes to expand them, like in the Chrome devtools REPL (i.e. large nested values can be expanded one level at a time). These values should be displayed this way in the reactor sidebar as well.
+
 This is super free-form. Maybe inspiration can come from iPython.
 
 
