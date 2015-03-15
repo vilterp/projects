@@ -18,11 +18,12 @@ This can be broken up into much smaller and more manageable steps that are each 
   1. Rewrite in Elm. Right now it is done like [this](https://github.com/elm-lang/elm-reactor/blob/master/backend/Index.hs) which is a terrible shame.
   2. Improve style, perhaps taking inspiration from GitHub navigation.
   3. Improve layout and usability. Lots of people have trouble figuring out what the wrench icon does and miss out on cool features!
-  4. Show README.md files with elm-markdown if they exist.
-  5. Make it easy to find documentation for packages that are used *without* an internet connection.
-  6. Figure out if new versions of packages exist and give notifications. Maybe have information about upgrade costs based on API diffs and number of uses of changed or removed values.
+  4. Mark Elm files that have a `main` function, since they're the only ones which will do something when you click on them.
+  5. Show README.md files with elm-markdown if they exist.
+  6. Make it easy to find documentation for packages that are used *without* an internet connection.
+  7. Figure out if new versions of packages exist and give notifications. Maybe have information about upgrade costs based on API diffs and number of uses of changed or removed values.
 
-I think 5 and 6 actually are projects of their own, but they could certainly be exposed through this API.
+I think 6 and 7 actually are projects of their own, but they could certainly be exposed through this API.
 
 
 ## elm-format
@@ -79,6 +80,8 @@ This was at ICFP 2014 in [the OCaml Workshop](http://ocaml.org/meetings/ocaml/20
 This connects back to the Elm Reactor navigation progress a bit, but it can be done totally independently as well.
 
 Some modules are best examined with the time-traveling debugger, others are best examined by poking around with certain functions. It would be extremely cool if we had an in-browser REPL so that we could do either. This would let us show `Element` and `Html` values really easily!
+
+Values of sum and record types should be printed out in the REPL such that you can click on their attributes to expand them, like in the Chrome devtools REPL (i.e. large nested values can be expanded one level at a time). These values should be displayed this way in the reactor sidebar as well.
 
 This is super free-form. Maybe inspiration can come from iPython.
 
